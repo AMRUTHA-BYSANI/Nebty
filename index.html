@@ -1,339 +1,660 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <title>Nebty | AI Automation for Modern Clinics</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebty | Ideas in. Growth out. — Marketing, Design & Technology</title>
+    <meta name="description" content="Nebty is a full-service digital agency founded by Amrutha & Praneetha. Marketing that moves. Design that sticks. Tech that scales.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans for bold, neo-grotesque brand typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
-    <header>
-
-        <nav class="navbar">
-
-            <div class="logo">
-
-                <img src="images/logo.jpeg"
-                    alt="Nebty Logo">
-
-            </div>
-
-            <ul>
-
-                <li><a href="#about">About</a></li>
-
-                <li><a href="#services">Services</a></li>
-
-                <li><a href="#vision">Vision</a></li>
-
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-
-    <!-- ================= HERO ================= -->
-
-    <section class="hero">
-
-        <div class="background-letter">
-            N
-        </div>
-
-        <div class="hero-content">
-
-            <p class="subtitle">
-                HEALTHCARE AUTOMATION
-            </p>
-
-            <h1>
-
-                Intelligent Automation
-                <br>
-
-                for Modern Clinics
-
-            </h1>
-
-            <p class="hero-text">
-
-                We help clinics automate patient
-                communication, appointments,
-                workflow management and AI powered
-                healthcare operations.
-
-            </p>
-
-            <a href="#services"
-                class="button">
-
-                Explore Our Services
-
+    <!-- Header & Navigation -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <!-- Brand Logo (Directly from Deck) -->
+            <a href="#hero" class="brand-logo" aria-label="Nebty Home">
+                <span class="logo-badge-text">NEBTY</span>
             </a>
 
+            <!-- Desktop Navigation Menu -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#channels" class="nav-link">Channels</a></li>
+                    <li><a href="#what-we-make" class="nav-link">What We Make</a></li>
+                    <li><a href="#industries" class="nav-link">Industries</a></li>
+                    <li><a href="#workflows" class="nav-link">Workflows</a></li>
+                    <li><a href="#founders" class="nav-link">Founders</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Action Controls -->
+            <div class="header-actions">
+                <!-- Theme Mode Toggle -->
+                <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
+                    <i class="fa-solid fa-moon icon-dark"></i>
+                    <i class="fa-solid fa-sun icon-light"></i>
+                </button>
+
+                <!-- Direct Phone Quick Button -->
+                <div class="quick-call-wrapper">
+                    <a href="tel:+919515510478" class="quick-call-btn" title="Call Amrutha or Praneetha">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 95155 10478</span>
+                    </a>
+                </div>
+
+                <!-- CTA Quote Button -->
+                <button type="button" class="btn btn-primary" id="openQuoteModalBtn">
+                    <span>Let's Talk Growth</span>
+                </button>
+
+                <!-- Sidebar Offcanvas Trigger -->
+                <button type="button" class="sidebar-toggle-btn" id="openDrawerBtn" aria-label="Open Sidebar Menu">
+                    <div class="dots-grid">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Mobile Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
+    </header>
 
-    </section>
+    <!-- Side Offcanvas Drawer for Quick Contact & Socials -->
+    <aside class="offcanvas-drawer" id="sideDrawer" aria-hidden="true" role="dialog" aria-label="Contact and Social Details">
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+        <div class="drawer-container">
+            <div class="drawer-header">
+                <span class="logo-badge-text">NEBTY</span>
+                <button type="button" class="drawer-close-btn" id="closeDrawerBtn" aria-label="Close Drawer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
 
-    <!-- ABOUT -->
+            <div class="drawer-body">
+                <p style="color: var(--text-secondary); margin-bottom: 24px; font-weight: 500;">
+                    Marketing that moves. Design that sticks. Tech that scales. Led directly by founders Amrutha and Praneetha.
+                </p>
 
-    <section id="about" class="about">
+                <div class="drawer-contact-cards">
+                    <!-- Founder Contact 1: Amrutha -->
+                    <div class="drawer-contact-card">
+                        <span class="card-label">Amrutha (Co-Founder)</span>
+                        <a href="tel:+919515510478" class="card-val">+91 95155 10478</a>
+                        <a href="https://wa.me/919515510478?text=Hello%20Amrutha,%20let's%20talk%20growth" target="_blank" rel="noopener" style="color: #25d366; font-size: 0.85rem; font-weight: 700; margin-top: 6px; display: inline-flex; align-items: center; gap: 6px;">
+                            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
 
+                    <!-- Founder Contact 2: Praneetha -->
+                    <div class="drawer-contact-card">
+                        <span class="card-label">Praneetha (Co-Founder)</span>
+                        <a href="tel:+918978173582" class="card-val">+91 89781 73582</a>
+                        <a href="https://wa.me/918978173582?text=Hello%20Praneetha,%20let's%20talk%20growth" target="_blank" rel="noopener" style="color: #25d366; font-size: 0.85rem; font-weight: 700; margin-top: 6px; display: inline-flex; align-items: center; gap: 6px;">
+                            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Email Contact -->
+                    <div class="drawer-contact-card">
+                        <span class="card-label">Email</span>
+                        <a href="mailto:hello@nebty.com" class="card-val" style="font-size: 1rem;">hello@nebty.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Slide-In Navigation -->
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <div class="drawer-header">
+            <span class="logo-badge-text">NEBTY</span>
+            <button type="button" class="drawer-close-btn" id="closeMobileNavBtn" aria-label="Close Navigation">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="#hero" class="mobile-link">Home</a></li>
+            <li><a href="#channels" class="mobile-link">Channels</a></li>
+            <li><a href="#what-we-make" class="mobile-link">What We Make</a></li>
+            <li><a href="#industries" class="mobile-link">Industries We Grow</a></li>
+            <li><a href="#workflows" class="mobile-link">Workflows & Steps</a></li>
+            <li><a href="#founders" class="mobile-link">Founders</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <div style="margin-top: auto; padding-top: 24px;">
+            <a href="tel:+919515510478" class="btn btn-primary w-full">Call +91 95155 10478</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- ==================================================================
+             SLIDE 1: HERO SECTION
+             "Ideas in. Growth out."
+             ================================================================== -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-elements">
+                <div class="glow-coral"></div>
+                <div class="glow-indigo"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-top-badge">NEBTY</div>
+
+                <div class="hero-headline-wrap">
+                    <h1 class="hero-main-heading">
+                        Ideas in. <br>
+                        <span class="growth-highlight">Growth out.</span>
+                    </h1>
+                </div>
+
+                <p class="hero-tagline-statement">
+                    Marketing that moves. Design that sticks. Tech that scales.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <span>Let's Talk Growth</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#what-we-make" class="btn btn-outline btn-lg">
+                        <span>What We Make</span>
+                    </a>
+                </div>
+
+                <div class="hero-footer-year">
+                    <span>Nebty • Portfolio 2026</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SLIDE 2: ONE TEAM. EVERY CHANNEL.
+             ================================================================== -->
+        <section class="channel-strip-section" id="channels">
+            <div class="container">
+                <div class="channel-strip-header">
+                    <h2 class="channel-strip-heading">One team. Every channel.</h2>
+                    <p class="channel-strip-sub">We don't just talk growth. We deliver it.</p>
+                </div>
+
+                <div class="channel-cards-row">
+                    <!-- Card 1 -->
+                    <div class="channel-card c-growth">
+                        <h4>360° Growth</h4>
+                        <p>Strategy to scale, one team</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="channel-card c-seo">
+                        <h4>SEO · AEO · GEO</h4>
+                        <p>Be found by search and AI</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="channel-card c-web">
+                        <h4>Web & Apps</h4>
+                        <p>Fast, conversion-ready builds</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="channel-card c-perf">
+                        <h4>Performance</h4>
+                        <p>Paid media that pays back</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="channel-card c-brand">
+                        <h4>Branding</h4>
+                        <p>Identities people remember</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SLIDE 3: WHAT WE MAKE (Design / Marketing / Technology)
+             ================================================================== -->
+        <section class="what-we-make-section" id="what-we-make">
+            <div class="container">
+                <h2 class="what-we-make-heading">What we make</h2>
+
+                <div class="what-we-make-grid">
+                    <!-- Column 1: Design -->
+                    <div class="make-column-card">
+                        <h3 class="make-column-title title-design">Design</h3>
+                        <ul class="make-list">
+                            <li>Brand identity</li>
+                            <li>Logo & visual systems</li>
+                            <li>Graphic design</li>
+                            <li>Motion graphics</li>
+                            <li>Video production</li>
+                            <li>CGI & 3D visuals</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Marketing -->
+                    <div class="make-column-card">
+                        <h3 class="make-column-title title-marketing">Marketing</h3>
+                        <ul class="make-list">
+                            <li>Social media marketing</li>
+                            <li>Performance marketing</li>
+                            <li>SEO & local SEO</li>
+                            <li>Content marketing</li>
+                            <li>Marketing consultancy</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Technology -->
+                    <div class="make-column-card">
+                        <h3 class="make-column-title title-tech">Technology</h3>
+                        <ul class="make-list">
+                            <li>Website development</li>
+                            <li>Landing pages</li>
+                            <li>E-commerce</li>
+                            <li>UI/UX design</li>
+                            <li>AI automation</li>
+                            <li>Analytics & reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SLIDE 4: INDUSTRIES WE GROW (Signature Coral Banner)
+             ================================================================== -->
+        <section class="industries-banner-section" id="industries">
+            <div class="container">
+                <h2 class="industries-heading">Industries we grow</h2>
+
+                <div class="industries-pills-wrap">
+                    <span class="industry-pill pill-dark">Real Estate</span>
+                    <span class="industry-pill pill-white">Healthcare</span>
+                    <span class="industry-pill pill-white">Education</span>
+                    <span class="industry-pill pill-dark">E-Commerce</span>
+                    <span class="industry-pill pill-white">Hospitality</span>
+                    <span class="industry-pill pill-white">Technology</span>
+                    <span class="industry-pill pill-dark">Finance</span>
+                    <span class="industry-pill pill-white">Manufacturing</span>
+                    <span class="industry-pill pill-white">D2C Brands</span>
+                    <span class="industry-pill pill-dark">Startups</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SLIDE 8: WEBSITES BUILT TO RANK
+             ================================================================== -->
+        <section class="workflow-section bg-dark" id="workflows">
+            <div class="container">
+                <div class="workflow-header">
+                    <h2 class="workflow-title">Websites built to rank</h2>
+                    <p class="workflow-sub sub-coral">Engineered for search supremacy, speed, and conversions</p>
+                </div>
+
+                <div class="six-steps-grid">
+                    <div class="step-card-dark">
+                        <span class="step-duration">01 · 3–5 days</span>
+                        <h3 class="step-name">Discovery</h3>
+                        <p class="step-desc">Sitemap, journeys, tech brief</p>
+                    </div>
+
+                    <div class="step-card-dark">
+                        <span class="step-duration">02 · 4–6 days</span>
+                        <h3 class="step-name">Wireframes</h3>
+                        <p class="step-desc">Low-fi pages, mobile-first, feedback</p>
+                    </div>
+
+                    <div class="step-card-dark">
+                        <span class="step-duration">03 · 10–15 days</span>
+                        <h3 class="step-name">UI design</h3>
+                        <p class="step-desc">Hi-fi designs, design system, 2 revisions</p>
+                    </div>
+
+                    <div class="step-card-dark">
+                        <span class="step-duration">04 · 10–20 days</span>
+                        <h3 class="step-name">Development</h3>
+                        <p class="step-desc">CMS, integrations, speed work</p>
+                    </div>
+
+                    <div class="step-card-dark">
+                        <span class="step-duration">05 · 4–5 days</span>
+                        <h3 class="step-name">SEO foundation</h3>
+                        <p class="step-desc">Keywords, schema, Search Console</p>
+                    </div>
+
+                    <div class="step-card-dark">
+                        <span class="step-duration">06 · 2–3 days</span>
+                        <h3 class="step-name">Launch</h3>
+                        <p class="step-desc">QA, go-live, training, 2-week watch</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SLIDE 5: BRANDING IN 5 STEPS
+             ================================================================== -->
+        <section class="workflow-section bg-sand">
+            <div class="container">
+                <div class="workflow-header">
+                    <h2 class="workflow-title">Branding in 5 steps</h2>
+                    <p class="workflow-sub sub-indigo">Total: 21–35 days</p>
+                </div>
+
+                <div class="five-steps-row">
+                    <div class="step-card">
+                        <span class="step-num-highlight">01</span>
+                        <h3 class="step-name">Discovery</h3>
+                        <span class="step-duration">3–5 days</span>
+                        <p class="step-desc">Questionnaire, visual audit, 3 moodboards</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-num-highlight">02</span>
+                        <h3 class="step-name">Strategy</h3>
+                        <span class="step-duration">3–5 days</span>
+                        <p class="step-desc">Positioning, personality, tone of voice, taglines</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-num-highlight">03</span>
+                        <h3 class="step-name">Identity</h3>
+                        <span class="step-duration">7–10 days</span>
+                        <p class="step-desc">3 logo concepts, palette, type, 2 revisions</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-num-highlight">04</span>
+                        <h3 class="step-name">Collateral</h3>
+                        <span class="step-duration">5–7 days</span>
+                        <p class="step-desc">Guidelines, stationery, social kit, packaging</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-num-highlight">05</span>
+                        <h3 class="step-name">Launch</h3>
+                        <span class="step-duration">5–7 days</span>
+                        <p class="step-desc">Final files, 45-min call, transition checklist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SLIDE 6: SOCIAL MEDIA, MONTHLY
+             ================================================================== -->
+        <section class="workflow-section bg-dark">
+            <div class="container">
+                <div class="workflow-header">
+                    <h2 class="workflow-title">Social media, monthly</h2>
+                    <p class="workflow-sub sub-coral">A retainer that runs itself</p>
+                </div>
+
+                <div class="five-steps-row">
+                    <div class="step-card-dark">
+                        <span class="step-num-highlight">01</span>
+                        <h3 class="step-name">Onboarding</h3>
+                        <span class="step-duration">5 days</span>
+                        <p class="step-desc">Access, profile audit, competitor analysis, content pillars</p>
+                    </div>
+
+                    <div class="step-card-dark">
+                        <span class="step-num-highlight">02</span>
+                        <h3 class="step-name">Planning</h3>
+                        <span class="step-duration">4–5 days</span>
+                        <p class="step-desc">30-day calendar, grid design, profile polish</p>
+                    </div>
+
+                    <div class="step-card-dark">
+                        <span class="step-num-highlight">03</span>
+                        <h3 class="step-name">Content</h3>
+                        <span class="step-duration">Per scope</span>
+                        <p class="step-desc">Reels, statics, captions and CTAs</p>
+                    </div>
+
+                    <div class="step-card-dark">
+                        <span class="step-num-highlight">04</span>
+                        <h3 class="step-name">Community</h3>
+                        <span class="step-duration">Daily</span>
+                        <p class="step-desc">Comments, DMs, lead tagging, collabs</p>
+                    </div>
+
+                    <div class="step-card-dark">
+                        <span class="step-num-highlight">05</span>
+                        <h3 class="step-name">Reporting</h3>
+                        <span class="step-duration">Monthly</span>
+                        <p class="step-desc">Reach, top posts, next-month plan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SLIDE 7: PERFORMANCE MARKETING
+             ================================================================== -->
+        <section class="workflow-section bg-sand">
+            <div class="container">
+                <div class="workflow-header">
+                    <h2 class="workflow-title">Performance marketing</h2>
+                    <p class="workflow-sub sub-indigo">7-day setup + monthly retainer</p>
+                </div>
+
+                <div class="five-steps-row">
+                    <div class="step-card">
+                        <span class="step-num-highlight">01</span>
+                        <h3 class="step-name">Audit</h3>
+                        <span class="step-duration">2–3 days</span>
+                        <p class="step-desc">Ad account, pixel and tracking checks, personas</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-num-highlight">02</span>
+                        <h3 class="step-name">Strategy</h3>
+                        <span class="step-duration">2–3 days</span>
+                        <p class="step-desc">Funnel mapping, budgets, creative briefs, audiences</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-num-highlight">03</span>
+                        <h3 class="step-name">Launch</h3>
+                        <span class="step-duration">1–2 days</span>
+                        <p class="step-desc">Build, soft launch, 48-hr monitoring</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-num-highlight">04</span>
+                        <h3 class="step-name">Optimise</h3>
+                        <span class="step-duration">Weekly</span>
+                        <p class="step-desc">CTR, CPC, ROAS, A/B tests, budget shifts</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-num-highlight">05</span>
+                        <h3 class="step-name">Review</h3>
+                        <span class="step-duration">Monthly</span>
+                        <p class="step-desc">Full-funnel debrief and next-cycle brief</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SLIDE 9: LET'S TALK GROWTH (Direct Founders Signature)
+             ================================================================== -->
+        <section class="contact-cta-hero" id="founders">
+            <div class="container">
+                <div class="contact-cta-container">
+                    <h2 class="contact-cta-heading">
+                        Let's talk <br>
+                        growth.
+                    </h2>
+                    <p class="contact-cta-sub">
+                        Bold ideas. Smart strategies. Real growth.
+                    </p>
+
+                    <div class="founders-contact-row">
+                        <!-- Founder 1: Amrutha -->
+                        <div class="founder-block">
+                            <h3>Amrutha</h3>
+                            <a href="tel:+919515510478">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+91 95155 10478</span>
+                            </a>
+                            <a href="https://wa.me/919515510478?text=Hello%20Amrutha,%20let's%20talk%20growth" target="_blank" rel="noopener" class="founder-wa-badge">
+                                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+
+                        <!-- Founder 2: Praneetha -->
+                        <div class="founder-block">
+                            <h3>Praneetha</h3>
+                            <a href="tel:+918978173582">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+91 89781 73582</span>
+                            </a>
+                            <a href="https://wa.me/918978173582?text=Hello%20Praneetha,%20let's%20talk%20growth" target="_blank" rel="noopener" class="founder-wa-badge">
+                                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             DIRECT INQUIRY FORM
+             ================================================================== -->
+        <section class="contact-form-section" id="contact">
+            <div class="container">
+                <div class="form-card">
+                    <h3 style="font-size: 2rem; margin-bottom: 8px;">Start Your Project</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 28px;">Connect directly with founders Amrutha and Praneetha.</p>
+
+                    <form id="contactForm" class="site-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userName">Your Name *</label>
+                                <input type="text" id="userName" name="name" placeholder="Rahul Sharma" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="userEmail">Email Address *</label>
+                                <input type="email" id="userEmail" name="email" placeholder="rahul@company.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userPhone">Phone / WhatsApp Number *</label>
+                                <input type="tel" id="userPhone" name="phone" placeholder="9876543210" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="userService">Service *</label>
+                                <select id="userService" name="service" required>
+                                    <option value="" disabled selected>Select a channel</option>
+                                    <option value="360° Growth">360° Growth Strategy</option>
+                                    <option value="SEO · AEO · GEO">SEO · AEO · GEO (Search & AI)</option>
+                                    <option value="Web & Apps">Web & Apps Development</option>
+                                    <option value="Performance Marketing">Performance Marketing</option>
+                                    <option value="Branding">Branding & Visual Systems</option>
+                                    <option value="Social Media Monthly">Social Media Retainer</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userMessage">Brief Overview *</label>
+                            <textarea id="userMessage" name="message" rows="4" placeholder="Tell us about your brand, timeline, and goals..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-full">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <div class="form-status-msg" id="formStatusMsg" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
         <div class="container">
+            <div class="footer-top">
+                <div>
+                    <span class="footer-logo-title">NEBTY</span>
+                    <p class="footer-tagline">Marketing that moves. Design that sticks. Tech that scales.</p>
+                </div>
+                <div style="display: flex; gap: 20px; font-weight: 700;">
+                    <a href="tel:+919515510478">Amrutha: 95155 10478</a>
+                    <span>•</span>
+                    <a href="tel:+918978173582">Praneetha: 89781 73582</a>
+                </div>
+            </div>
 
-            <h2>About Nebty</h2>
-
-            <p>
-
-                Nebty is an AI automation company
-                dedicated to helping clinics work
-                smarter through intelligent
-                automation and seamless workflows.
-
-            </p>
-
-            <p>
-
-                We simplify everyday operations by
-                automating patient communication,
-                appointment reminders, follow-ups,
-                internal workflows and software
-                integrations — allowing healthcare
-                professionals to spend more time
-                caring for patients.
-
-            </p>
-
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Nebty. All rights reserved.</p>
+                <p>Founded by Amrutha & Praneetha • Portfolio 2026</p>
+            </div>
         </div>
+    </footer>
 
-    </section>
-<!-- ================= SERVICES ================= -->
-
-<section id="services" class="services">
-
-    <div class="container">
-
-        <p class="section-tag">WHAT WE OFFER</p>
-
-        <h2>Our Services</h2>
-
-        <div class="service-grid">
-
-            <div class="service-card">
-                <div class="icon">💬</div>
-                <h3>Patient Communication</h3>
-                <p>
-                    Automated WhatsApp messages including
-                    thank-you messages, reminders,
-                    follow-ups and patient notifications.
-                </p>
+    <!-- Native Accessible Dialog: Get Free Quote Modal -->
+    <dialog class="accessible-dialog" id="quoteDialog" aria-labelledby="dialogTitle">
+        <div class="dialog-content" style="padding: 34px; background: var(--bg-surface); border-radius: var(--radius-lg); border: 2px solid var(--coral-primary);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3 id="dialogTitle" style="font-size: 1.6rem; font-weight: 900;">Let's talk growth.</h3>
+                <button type="button" id="closeQuoteModalBtn" style="font-size: 1.4rem; color: var(--text-primary); cursor: pointer;">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
-
-            <div class="service-card">
-                <div class="icon">📅</div>
-                <h3>Appointment Automation</h3>
-                <p>
-                    Reduce missed appointments through
-                    intelligent reminders and scheduling.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">⚙️</div>
-                <h3>Workflow Automation</h3>
-                <p>
-                    Automate repetitive administrative
-                    tasks and improve staff productivity.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">🔗</div>
-                <h3>Software Integration</h3>
-                <p>
-                    Connect your existing clinic software
-                    with modern automation solutions.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">🤖</div>
-                <h3>AI Assistants</h3>
-                <p>
-                    Smart assistants that answer patient
-                    queries and support clinic operations.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">📊</div>
-                <h3>Reports & Analytics</h3>
-                <p>
-                    Gain valuable insights into patient
-                    communication and workflow efficiency.
-                </p>
-            </div>
-
+            <p style="color: var(--text-secondary); margin-bottom: 20px; font-weight: 500;">Direct consultation with founders Amrutha & Praneetha.</p>
+            <form id="dialogForm">
+                <div class="form-group">
+                    <label for="dlgName">Name</label>
+                    <input type="text" id="dlgName" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="dlgPhone">Phone</label>
+                    <input type="tel" id="dlgPhone" required placeholder="Phone number">
+                </div>
+                <div class="form-group">
+                    <label for="dlgService">Channel</label>
+                    <select id="dlgService" required>
+                        <option value="360° Growth">360° Growth</option>
+                        <option value="SEO · AEO · GEO">SEO · AEO · GEO</option>
+                        <option value="Web & Apps">Web & Apps</option>
+                        <option value="Performance">Performance</option>
+                        <option value="Branding">Branding</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-full" style="margin-top: 10px;">Connect on WhatsApp</button>
+            </form>
         </div>
+    </dialog>
 
-    </div>
-
-</section>
-
-
-
-<!-- ================= WHY US ================= -->
-
-<section class="why">
-
-    <div class="container">
-
-        <p class="section-tag">WHY NEBTY</p>
-
-        <h2>Why Clinics Choose Us</h2>
-
-        <div class="why-grid">
-
-            <div>✓ Save Staff Time</div>
-
-            <div>✓ Reduce Manual Work</div>
-
-            <div>✓ Improve Patient Experience</div>
-
-            <div>✓ Works With Existing Software</div>
-
-            <div>✓ Secure Automation</div>
-
-            <div>✓ Built Specifically For Clinics</div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= WORKFLOW ================= -->
-
-<section id="vision" class="workflow">
-
-    <div class="container">
-
-        <p class="section-tag">HOW IT WORKS</p>
-
-        <h2>Connected Healthcare Workflow</h2>
-
-        <div class="flow">
-
-            <div>Reception</div>
-
-            <span>→</span>
-
-            <div>Nebty</div>
-
-            <span>→</span>
-
-            <div>Doctor</div>
-
-            <span>→</span>
-
-            <div>Lab</div>
-
-            <span>→</span>
-
-            <div>Pharmacy</div>
-
-            <span>→</span>
-
-            <div>Patient</div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="contact">
-
-    <div class="container">
-
-        <p class="section-tag">GET IN TOUCH</p>
-
-        <h2>Let's Build Smarter Clinics Together</h2>
-
-        <p class="contact-text">
-
-            We'd love to help your clinic simplify
-            operations through intelligent automation.
-
-        </p>
-
-        <div class="contact-box">
-
-             <div class="contact-card">
-        <h3>📞 Contact</h3>
-        <p>+91 95155 10478</p>
-        <p>+91 89781 73582</p>
-    </div>
-
-    <div class="contact-card">
-        <h3>📍 Location</h3>
-        <p>India</p>
-    </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<footer>
-
-    <img src="images/log.jpeg" alt="Nebty Logo">
-
-    <p>
-
-        Intelligent Automation for Modern Clinics
-
-    </p>
-
-    <span>
-
-        © 2026 Nebty. All Rights Reserved.
-
-    </span>
-
-</footer>
-    <script src="script.js"></script>
-
+    <!-- JavaScript Bundle -->
+    <script src="js/main.js"></script>
 </body>
-
 </html>
